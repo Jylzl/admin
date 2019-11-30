@@ -1,32 +1,80 @@
+<!--
+ * @description: Description
+ * @author: lizlong<94648929@qq.com>
+ * @since: 2019-11-29 09:17:39
+ * @LastAuthor: lizlong
+ * @lastTime: 2019-11-29 10:37:51
+ -->
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div id="app">
+		<router-view></router-view>
+	</div>
 </template>
 
+<script>
+export default {
+	name: "app"
+};
+</script>
+
 <style lang="scss">
+@import url(./assets/css/rest.min.css);
+@import url(./assets/css/animate.css);
+@import url(./assets/iconfont/iconfont.css);
+
+html,
+body,
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+	box-sizing: border-box;
+	margin: 0;
+	width: 100%;
+	height: 100%;
 }
 
-#nav {
-  padding: 30px;
+@media screen and (max-width: 300px) {
+	html {
+		width: 1920px;
+		height: 1080px;
+	}
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+@media (-webkit-max-device-pixel-ratio: 1) {
+	::-webkit-scrollbar-track-piece {
+		background-color: #ffffff;
+	}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+	::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: #c2c2c2;
+		background-clip: padding-box;
+		min-height: 28px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: #a0a0a0;
+	}
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
 }
 </style>

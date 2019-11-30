@@ -1,0 +1,28 @@
+/* theme color */
+$--color-primary: #409EFF;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+@import '~element-ui/lib/theme-chalk/display.css';
+
+//容器样式
+.el-container {
+  height: 100%;
+}
+
+.el-header,
+.el-main {
+  padding: 0;
+}
+
+// 滚动条
+.scrollbar-wrapper {
+  overflow-x: hidden !important;
+}
+
+.el-scrollbar,
+.el-scrollbar__view {
+  height: 100%;
+}
