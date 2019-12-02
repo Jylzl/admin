@@ -3,7 +3,7 @@
  * @author: lizlong<94648929@qq.com>
  * @since: 2019-07-09 20:22:56
  * @LastAuthor: lizlong
- * @lastTime: 2019-11-29 12:56:35
+ * @lastTime: 2019-12-02 13:12:04
  -->
 <template>
 	<div class="p-aside">
@@ -12,15 +12,16 @@
 				<el-submenu index="1">
 					<template slot="title">
 						<i class="el-icon-location"></i>
-						<span>导航一</span>
+						<span>内容管理</span>
 					</template>
 					<el-menu-item-group>
-						<template slot="title">分组一</template>
-						<el-menu-item index="1-1">选项1</el-menu-item>
-						<el-menu-item index="1-2">选项2</el-menu-item>
+						<template slot="title">内容</template>
+						<el-menu-item index="1-1">内容列表</el-menu-item>
+						<el-menu-item index="1-2">内容制作</el-menu-item>
 					</el-menu-item-group>
-					<el-menu-item-group title="分组2">
-						<el-menu-item index="1-3">选项3</el-menu-item>
+					<el-menu-item-group title="专题">
+						<el-menu-item index="1-1">专题列表</el-menu-item>
+						<el-menu-item index="1-2">专题制作</el-menu-item>
 					</el-menu-item-group>
 					<el-submenu index="1-4">
 						<template slot="title">选项4</template>
