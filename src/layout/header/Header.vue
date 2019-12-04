@@ -3,7 +3,7 @@
  * @author: lizlong<94648929@qq.com>
  * @since: 2019-06-10 08:35:23
  * @LastAuthor: lizlong
- * @lastTime: 2019-11-29 15:24:40
+ * @lastTime: 2019-12-03 11:36:43
  -->
 <template>
 	<div class="header">
@@ -314,6 +314,10 @@ export default {
 	justify-content: flex-end;
 	height: 100%;
 	align-items: center;
+}
+
+.siteSearch-form {
+	margin-right: 10px;
 }
 
 .message {
