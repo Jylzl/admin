@@ -3,7 +3,7 @@
  * @author: lizlong<94648929@qq.com>
  * @since: 2019-07-31 10:38:45
  * @LastAuthor: lizlong
- * @lastTime: 2019-11-13 10:13:59
+ * @lastTime: 2019-12-29 17:10:21
  */
 import {
 	Encrypt
@@ -111,14 +111,15 @@ const user = {
 
 			return new Promise((resolve, reject) => {
 				userLogin({
-						account: userName,
-						password: password
-					}).then(res => {
-						if (res.code == code.success) {
-							commit('LOGING_STATE', res.data); //执行登陆成功的方法
-						}
-						resolve(res)
-					})
+					username: userName,
+					password: password
+				}).then(res => {
+					console.log(res);
+					if (res.code == code.success) {
+						commit('LOGING_STATE', res.data); //执行登陆成功的方法
+					}
+					resolve(res)
+				})
 					.catch(err => {
 						console.log(err)
 						reject(false);
@@ -134,14 +135,14 @@ const user = {
 
 			return new Promise((resolve, reject) => {
 				userSso({
-						account: userName,
-						password: password
-					}).then(res => {
-						if (res.code == code.success) {
-							commit('LOGING_STATE', res.data); //执行登陆成功的方法
-						}
-						resolve(res)
-					})
+					account: userName,
+					password: password
+				}).then(res => {
+					if (res.code == code.success) {
+						commit('LOGING_STATE', res.data); //执行登陆成功的方法
+					}
+					resolve(res)
+				})
 					.catch(err => {
 						console.log(err)
 						reject(false);

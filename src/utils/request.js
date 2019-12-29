@@ -11,7 +11,7 @@
  * @Author: lizlong<94648929@qq.com>
  * @Date: 2019-05-27 08:41:05
  * @LastAuthor: lizlong
- * @lastTime: 2019-09-06 17:46:37
+ * @lastTime: 2019-12-29 17:48:22
  */
 
 import axios from 'axios'
@@ -39,7 +39,7 @@ function showMessage(value) {
 
 // create an axios instance
 const service = axios.create({
-	withCredentials: true,
+	withCredentials: false,
 	baseURL: process.env.VUE_APP_SERVER_API, // api 的 base_url
 	timeout: 15000 // 请求超时时间
 })
@@ -77,6 +77,7 @@ service.interceptors.response.use(
 	 */
 	response => {
 		const res = response.data;
+		console.log(res)
 		switch (Number(res.code)) {
 			case code.success:
 				break;
@@ -93,6 +94,8 @@ service.interceptors.response.use(
 		return response.data;
 	},
 	error => {
+		console.log(error)
+		console.log(error.response)
 		showMessage('服务器响应失败');
 		return Promise.reject(error)
 	}

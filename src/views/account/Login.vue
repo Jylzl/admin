@@ -2,8 +2,8 @@
  * @description: Description
  * @author: lizlong<94648929@qq.com>
  * @since: 2019-08-19 14:58:39
- * @LastAuthor: lizlong
- * @lastTime: 2019-12-02 09:58:37
+ * @LastAuthor   : lizlong
+ * @lastTime     : 2019-12-29 17:01:56
  -->
 <template>
 	<div class="land-box">
@@ -139,6 +139,9 @@
 					>{{landLoading.content}}</el-button>
 				</div>
 				<div class="three-land">
+					<el-button type="text">
+						<icon name="github" :w="28" :h="28"></icon>
+					</el-button>
 					<el-button type="text">
 						<icon name="icon_qq" :w="32" :h="32"></icon>
 					</el-button>
