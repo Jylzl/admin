@@ -6,5 +6,5 @@
  * @lastTime: 2019-09-17 11:20:26
  */
 module.exports = {
-  title: '孝感市信息资源管理平台',
+  title: '后台管理系统',
 }

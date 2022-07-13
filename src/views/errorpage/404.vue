@@ -18,7 +18,7 @@
 				<div class="bullshit__oops">OOPS!</div>
 				<div class="bullshit__info">
 					<span>版权所有 </span>
-					<a class="link-type" href="http://www.whcxbd.com/" target="_blank">武汉创信博达信息技术有限公司</a>
+					<a class="link-type" href="http://www.whcxbd.com/" target="_blank">lizilong.top</a>
 				</div>
 				<div class="bullshit__headline">{{ message }}</div>
 				<div class="bullshit__info">请检查您输入的网址是否正确，请点击以下按钮返回主页或者发送错误报告</div>

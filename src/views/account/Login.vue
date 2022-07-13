@@ -12,7 +12,7 @@
 				<img :src="imgUrl" alt draggable="false" />
 			</div>
 			<div class="right">
-				<div class="logo">孝感市信息资源管理平台</div>
+				<div class="logo">后台管理系统</div>
 				<div class="land-form">
 					<el-tabs v-model="activeName" @tab-click="handleClick">
 						<el-tab-pane label="账号登录" name="password">
@@ -152,7 +152,7 @@
 			</div>
 		</div>
 		<div class="land-box-footer">
-			<p>CopyRight @ 2019 武汉创信博达信息技术有限公司</p>
+			<p>CopyRight @ 2022 lizilong.top</p>
 		</div>
 	</div>
 </template>

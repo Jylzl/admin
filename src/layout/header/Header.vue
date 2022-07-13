@@ -7,17 +7,15 @@
  -->
 <template>
 	<div class="header">
-		<div class="header-left">1</div>
+		<div class="header-left">
+			<div class="p-logo">
+				后台管理
+			</div>
+		</div>
 		<div class="header-right">
 			<div class="header-nav">
-				<el-menu
-					default-active="1"
-					class="el-menu-demo"
-					mode="horizontal"
-					background-color="#165abb"
-					text-color="#fff"
-					active-text-color="#ffd04b"
-				>
+				<el-menu default-active="1" class="el-menu-demo" mode="horizontal" background-color="#165abb"
+					text-color="#fff" active-text-color="#ffd04b">
 					<el-menu-item index="1">工作台</el-menu-item>
 					<el-submenu index="2">
 						<template slot="title">处理中心</template>
@@ -29,30 +27,18 @@
 				</el-menu>
 			</div>
 			<div class="header-user">
-				<div class="siteSearch-form" :class="{'show':show}">
+				<div class="siteSearch-form" :class="{ 'show': show }">
 					<el-button type="text" @click.stop="siteSearchShow(true)" v-popover:siteSearch>
 						<svg width="26" height="26">
 							<image xlink:href="@/assets/svg/search.svg" src="svg.png" width="26" height="26" />
 						</svg>
 					</el-button>
 					<el-popover ref="siteSearch" placement="bottom" width="260" trigger="click">
-						<el-select
-							v-model="search"
-							:remote-method="querySearch"
-							filterable
-							default-first-option
-							remote
-							placeholder="请输入内容"
-							class="header-search-select"
-							@change="change"
-							@blur="siteSearchShow(false)"
-						>
-							<el-option
-								v-for="item in options"
-								:key="item.path"
-								:value="item"
-								:label="item.name.join(' > ')"
-							/>
+						<el-select v-model="search" :remote-method="querySearch" filterable default-first-option remote
+							placeholder="请输入内容" class="header-search-select" @change="change"
+							@blur="siteSearchShow(false)">
+							<el-option v-for="item in options" :key="item.path" :value="item"
+								:label="item.name.join(' > ')" />
 						</el-select>
 					</el-popover>
 				</div>
@@ -65,34 +51,25 @@
 						</el-badge>
 					</el-button>
 					<el-popover ref="message" placement="bottom" width="200" trigger="click">
-						<p>必填</p>
+						<p>待办事项</p>
 					</el-popover>
 				</div>
 				<div class="user-console">
 					<el-dropdown trigger="click">
 						<div class="el-dropdown-link">
-							<el-avatar
-								class="user-header-img"
-								:size="32"
-								src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2030012986,1102835514&fm=200&gp=0.jpg"
-							></el-avatar>
+							<el-avatar class="user-header-img" :size="32"
+								src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2030012986,1102835514&fm=200&gp=0.jpg">
+							</el-avatar>
 							<!-- <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2030012986,1102835514&fm=200&gp=0.jpg"
 							alt="" class="user-header-img">-->
 							<span class="item user-name">用户名</span>
 							<i class="el-icon-caret-bottom"></i>
 						</div>
-						<el-dropdown-menu slot="dropdown">
-							<el-dropdown-item>
-								<el-link :underline="false" @click="$router.push({name:'personalHome'})">个人主页</el-link>
+						<el-dropdown-menu slot="dropdown" size="small">
+							<el-dropdown-item icon="el-icon-user"
+								@click.native="$router.push({ name: 'personalHome' })">个人主页
 							</el-dropdown-item>
-							<el-dropdown-item>
-								<el-button type="text" @click="loginOut()">切换用户</el-button>
-							</el-dropdown-item>
-							<el-dropdown-item divided>
-								<el-button type="text" icon="el-icon-lock" @click="clockScreen()">锁屏</el-button>
-							</el-dropdown-item>
-							<el-dropdown-item divided>
-								<el-button type="text" icon="el-icon-lock" @click="loginOut()">退出</el-button>
+							<el-dropdown-item divided icon="el-icon-lock" @click.native="loginOut()">退出登录
 							</el-dropdown-item>
 						</el-dropdown-menu>
 					</el-dropdown>
@@ -134,7 +111,7 @@ export default {
 			return this.$store.getters.permission_routes;
 		}
 	},
-	created() {},
+	created() { },
 	mounted() {
 		this.searchPool = this.generateRoutes(this.routes);
 	},
@@ -263,6 +240,12 @@ export default {
 </style>
 
 <style scoped>
+.p-logo {
+	color: #fff;
+	line-height: 32px;
+	padding-left: 20px;
+}
+
 .header {
 	height: 60px;
 	display: flex;
